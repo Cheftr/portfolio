@@ -1,0 +1,10 @@
+.jumbotron {
+  align-items: baseline;
+  height: 300px;
+  padding: 6rem 2rem;
+  background-image: url("../images/northern_lights.jpg");
+  background-position: center;
+}
+ #jumboname {
+   color: white;
+ }
