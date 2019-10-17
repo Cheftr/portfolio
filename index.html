@@ -53,20 +53,48 @@
       </div>
     </div>
     <!--"Blog/Project Updates"--> <!--Add sections to open specific projects, then display all cards and updates-->
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col">
-          <div class="card mb-3">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted"></small></p>
-            </div>
-          </div>
+    <!--Accordion wrapper-->
+    <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+
+      <!-- Accordion card -->
+      <div class="card dice_card">
+
+        <!-- Card header -->
+        <div class="card-header" role="tab" id="headingOne1">
+          <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
+          aria-controls="collapseOne1">
+          <h5 class="mb-0">
+            DnD Dice Tower <i class="fas fa-angle-down rotate-icon"></i>
+          </h5>
+        </a>
+      </div>
+
+      <!-- Card body -->
+      <div id="collapseOne1" class="collapse" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+        <div class="card-body example-1 scrollbar">
+          ...<br>
+          .<br>
+          .<br>
+          .<br>
+          .<br>
+          .<br>
+          .<br>
+          .<br>
+          .<br>
+          .<br>
+          .<br>
+          .<br>
+          .<br>
+          .<br>
+          .<br>
+          .<br>
+          .<br>
         </div>
       </div>
+
     </div>
+  </div>
+  <!-- Accordion card -->
     <!-- Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

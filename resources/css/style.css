@@ -9,3 +9,12 @@
    color: white;
    font-family: 'Crimson Text', serif;
  }
+
+.dice_card {
+  margin-top: 3rem;
+  text-align: center;
+}
+.example-1 {
+position: relative;
+overflow-y: scroll;
+height: 200px; }
