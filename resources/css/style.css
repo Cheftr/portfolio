@@ -26,5 +26,5 @@ height: 200px; }
 }
 
 .profile-picture:hover {
-  transform: scale(1.2);
+  transform: scale(1.5);
 }
