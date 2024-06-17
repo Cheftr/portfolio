@@ -12,6 +12,33 @@
   <link href="./resources/css/style.css" type="text/css" rel="stylesheet" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   <link href="css/mdb.min.css" rel="stylesheet">
+  <style>
+    /* Add custom styles for feedback */
+    #feedback {
+      position: relative;
+      height: 100px; /* Adjust height as needed */
+      overflow: hidden;
+      background-color: #343A40; /* Background color */
+      color: #ffffff; /* Text color */
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px; /* Rounded corners */
+      margin-top: 20px; /* Adjust margin as needed */
+    }
+
+    .feedback-text {
+      position: absolute;
+      width: 100%;
+      opacity: 0;
+      transform: translateY(100%);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .show {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  </style>
 </head>
 
 <body class="bg-dark">
@@ -19,7 +46,8 @@
     <!-- Header of page -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
       <div class="container">
-        <a class="nav-link" href="index.html"><img src="resources/images/it_me_trans.png" alt="Tim Rishell" class="profile-picture"></a>
+        <a class="nav-link" href="index.html"><img src="resources/images/it_me_trans.png" alt="Tim Rishell"
+            class="profile-picture"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -48,7 +76,8 @@
   </header>
   <main>
     <!-- Jumbotron -->
-    <div class="jumbotron jumbotron-fluid" style="background-image: url('resources/images/northern_lights.jpg'); background-repeat: no-repeat; background-size: cover;">
+    <div class="jumbotron jumbotron-fluid"
+      style="background-image: url('resources/images/northern_lights.jpg'); background-repeat: no-repeat; background-size: cover;">
       <div class="container d-flex justify-content-center">
         <h1 class="display-4 text-center animated fadeInLeft" id="jumboname">Tim Rishell</h1>
       </div>
@@ -59,67 +88,49 @@
         <div class="col">
           <h1 class="text-center text-light">Goals and Aspirations</h1>
           <p class="text-center text-light">
-            I am currently studying Data Analytics through a course offered by <br><a href="https://www.nwmissouri.edu/">Northwest Missouri State University</a> through <a href="https://nclab.com/">NCLab</a>.
-            <br>
-            Some of the topics I have studied:
+            I am currently studying Data Analytics through a course offered by <br><a
+              href="https://www.nwmissouri.edu/">Northwest Missouri State University</a> through <a
+              href="https://nclab.com/">NCLab</a>.
+            <br> Some of the topics I have studied:
             <!-- Data Analytics Description -->
-            <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="Data analytics is a computer science field that uses data to find patterns, trends, and relationships to solve problems and generate insights. It involves collecting, organizing, and transforming data to make predictions and informed decisions. Data analytics can help businesses grow, improve decision-making, and shape business processes.">Data Analytics</a>,
+            <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom"
+              data-content="Data analytics is a computer science field that uses data to find patterns, trends, and relationships to solve problems and generate insights. It involves collecting, organizing, and transforming data to make predictions and informed decisions. Data analytics can help businesses grow, improve decision-making, and shape business processes.">Data
+              Analytics</a>,
             <!-- WCAG Description -->
-            <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="Web Content Accessibility Guidelines (WCAG) defines how to make Web content more accessible to people with disabilities. Accessibility involves a wide range of disabilities, including visual, auditory, physical, speech, cognitive, language, learning, and neurological disabilities.">Web Accessibility</a>,
+            <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom"
+              data-content="Web Content Accessibility Guidelines (WCAG) defines how to make Web content more accessible to people with disabilities. Accessibility involves a wide range of disabilities, including visual, auditory, physical, speech, cognitive, language, learning, and neurological disabilities.">Web
+              Accessibility</a>,
             <!-- HTML Description -->
-            <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.">HTML</a>,
+            <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom"
+              data-content="Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.">HTML</a>,
             <!-- CSS Description -->
-            <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.">CSS</a>,
+            <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom"
+              data-content="Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.">CSS</a>,
             <!-- Python Description -->
-            <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace.">Python</a>,
+            <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom"
+              data-content="Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace.">Python</a>,
             <!-- JavaScript Description -->
             and
-            <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="JavaScript, often abbreviated as JS, is a high-level, interpreted scripting language that conforms to the ECMAScript specification. JavaScript has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.">JavaScript</a>.<br>
-            On this page, you will find projects that I am currently working on, along with other ideas I aspire to create some day.
+            <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom"
+              data-content="JavaScript, often abbreviated as JS, is a high-level, interpreted scripting language that conforms to the ECMAScript specification. JavaScript has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.">JavaScript</a>.<br>
+            On this page, you will find feedback I have received working as a Visual Interpreter and feedback from various clients.<br> Some names have been removed for privacy reasons.
           </p>
         </div>
       </div>
     </div>
-    <!-- Blog/Project Updates -->
-    <div class="container">
+    <!-- Separator and Feedback Section -->
+    <div class="container mt-5 mb-5">
+      <div class="row">
+        <div class="col text-center">
+          <hr class="bg-light" style="width: 50%;">
+          <h2 class="text-light mt-4">Client Feedback</h2>
+          <hr class="bg-light" style="width: 50%;">
+        </div>
+      </div>
       <div class="row">
         <div class="col">
-          <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
-            <!-- Accordion card -->
-            <div class="card dice_card">
-              <!-- Card header -->
-              <div class="card-header" role="tab" id="headingOne1">
-                <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
-                  aria-controls="collapseOne1">
-                  <h5 class="mb-0">
-                    Placeholder <i class="fas fa-angle-down rotate-icon"></i>
-                  </h5>
-                </a>
-              </div>
-              <!-- Card body -->
-              <div id="collapseOne1" class="collapse" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
-                <div class="card-body example-1 scrollbar">
-                  ...<br>
-                  .<br>
-                  .<br>
-                  .<br>
-                  .<br>
-                  .<br>
-                  .<br>
-                  .<br>
-                  .<br>
-                  .<br>
-                  .<br>
-                  .<br>
-                  .<br>
-                  .<br>
-                  .<br>
-                  .<br>
-                  .<br>
-                </div>
-              </div>
-            </div>
-            <!-- Accordion card -->
+          <div id="feedback" class="text-center mt-4">
+            <!-- Feedback will be dynamically added here -->
           </div>
         </div>
       </div>
@@ -127,24 +138,90 @@
   </main>
   <footer class="bg-dark text-light text-center py-3">
     <div class="container">
-      <p>© 2024 Tim Rishell | <a href="mailto:tim@example.com" class="text-light">Contact</a> | <a href="#" class="text-light">Privacy Policy</a></p>
+      <p>© 2024 Tim Rishell | <a href="mailto:timrishellr@gmail.com" class="text-light">Contact</a></p>
       <div>
-        <a href="https://github.com/timrishell" class="text-light mr-2"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/timrishell" class="text-light mr-2"><i class="fab fa-linkedin"></i></a>
-        <a href="https://twitter.com/timrishell" class="text-light"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/Cheftr" class="text-light mr-2"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/timrishellr" class="text-light mr-2"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
   </footer>
   <!-- Bootstrap and jQuery -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
   <script>
-    $(document).ready(function () {
-      $('[data-toggle="popover"]').popover();
+    var feedbacks = [
+      "Timothy did an outstanding job!",
+      "Got the Google spreadsheet finished thank you so much.",
+      "Timothy was awesome personable professional and precise thank you Aira.",
+      "Timothy was great, I explained to him that I needed to get a test done in a certain amount of time. He was very proficient and making sure that I did not go over that time. He was pleasant to speak with, and I truly appreciate his patience in the task that I had at hand.",
+      "My computer screen was not turning on and we were able to resolve the issue. Thanks.",
+      "Very thorough. Thank you!",
+      "Timothy was great. He helped me get the information and this is good so I am happy at the moment.",
+      "Wow! Tim was super efficient and professional, helping me to edit. Clone this guy, please!",
+      "Thanks for helping me do a little bit of troubleshooting.",
+      "Timothy was great. He assisted me with the LCD screen on my instant pot. Wonderful assistance. Very nice.",
+      "I sure appreciate your help! Thanks so much! I absolutely could not have done it without you.",
+      "Pleasant and very good about description. Made a great suggestion so that my picture would turn out better. Thank you!",
+      "Quick and efficient",
+      "He is an excellent guide, and he keeps his eye on my camera feed so he doesn’t miss a single thing.",
+      "Thank you for helping me with my computer and all my miscellaneous tasks. I appreciate it.",
+      "Tim was great to work with. He was very patient and gave fabulous instructions of where to place the camera. Keep up the great work!",
+      "Very good efficient didn’t have to explain twice what I was looking for",
+      "Great! Great! Great! Hire more agents like this guy. Incredible for what I needed. Great. I always love it when Tim is the agent. Fantastic! Thank you!",
+      "Tim did a great job! Very pleasant to speak with very helpful also. Thank you so much!",
+      "Timothy was incredibly helpful as I was navigating in an area that wasn’t all that familiar to me. There were a couple of uncontrolled crosswalks and he helped me make sure that the traffic was clear before I crossed. He also was giving me very good directions to the store that I needed to get to so I really do appreciate it.",
+      "Timothy was extremely helpful helping me find items in the grocery store for my party and he was very good at finding me alternatives to have them delivered five stars.",
+      "Tim did a very good job on helping us to find expiration dates for several products which were difficult to spot. He stuck with it until we got all of them done. He was very patient and described clearly what had to be done. He did an excellent job.",
+      "Thanks for giving a great description of a new T-shirt. All I received from a braille contest. Very efficient and great exclamations.",
+      "Tim was a very pleasant person to speak with. He took the time to answer questions and look things up, and the results were good.",
+      "Tim expertly told me where to find the instructions, took the picture, and read them to me! Thank you ever so much!",
+      "He was great at describing the way the cover letter looked, as well as the font. I was concerned about sending something out that didn’t look professional, and he assured me that this cover letter looked professional. Keep up the great work.",
+      "Thank you so much! Busy airports can be overwhelming and it really helps to have someone on to help navigate.",
+      "Tim is very efficient and helps me do my job extremely well. I appreciate all that he does, good Agent."
+    ];
+
+    var feedbackContainer = document.getElementById('feedback');
+    var index = 0;
+
+    function displayFeedback() {
+      // Clear previous feedback
+      feedbackContainer.innerHTML = '';
+
+      // Create a new <p> element
+      var feedbackText = document.createElement('p');
+      feedbackText.classList.add('feedback-text');
+      feedbackText.textContent = feedbacks[index];
+      feedbackContainer.appendChild(feedbackText);
+
+      // Trigger reflow
+      void feedbackText.offsetWidth;
+
+      // Apply the show class to trigger the CSS animation
+      feedbackText.classList.add('show');
+
+      // Move to the next feedback item
+      index++;
+      if (index >= feedbacks.length) {
+        index = 0;
+      }
+
+      // Schedule the next feedback display
+      setTimeout(function () {
+        feedbackText.classList.remove('show');
+        setTimeout(displayFeedback, 1000); // Adjust delay as needed
+      }, 5000); // Adjust duration as needed
+    }
+
+    // Start displaying feedback when the page loads
+    document.addEventListener('DOMContentLoaded', function () {
+      displayFeedback();
     });
   </script>
 </body>

@@ -28,3 +28,10 @@ height: 200px; }
 .profile-picture:hover {
   transform: scale(1.5);
 }
+:focus {
+  outline: 2px solid #007bff; /* Example focus style */
+}
+.feedback-item {
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Adjust the transition duration and timing function */
+  }

@@ -19,7 +19,8 @@
     <!-- Header of page -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
       <div class="container">
-        <a class="nav-link" href="index.html"><img src="resources/images/it_me_trans.png" alt="Tim Rishell" class="profile-picture"></a>
+        <a class="nav-link" href="index.html"><img src="resources/images/it_me_trans.png" alt="Tim Rishell"
+            class="profile-picture"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -51,18 +52,19 @@
       <h1 class="text-center text-light">Contact</h1>
       <p class="text-center text-light">Get in touch with Tim Rishell.</p>
       <!-- Add your contact content here -->
-      <form class="text-light">
+      <form id="contactForm" class="text-light" method="post" action="send_email.php">
         <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" class="form-control" id="name" placeholder="Enter your name">
+          <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
         </div>
         <div class="form-group">
           <label for="email">Email address</label>
-          <input type="email" class="form-control" id="email" placeholder="Enter your email">
+          <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
         </div>
         <div class="form-group">
           <label for="message">Message</label>
-          <textarea class="form-control" id="message" rows="3" placeholder="Your message"></textarea>
+          <textarea class="form-control" id="message" name="message" rows="3" placeholder="Your message"
+            required></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
@@ -70,21 +72,23 @@
   </main>
   <footer class="bg-dark text-light text-center py-3">
     <div class="container">
-      <p>© 2024 Tim Rishell | <a href="mailto:tim@example.com" class="text-light">Contact</a> | <a href="#" class="text-light">Privacy Policy</a></p>
+      <p>© 2024 Tim Rishell | <a href="mailto:timrishellr@gmail.com" class="text-light">Contact</a></p>
       <div>
-        <a href="https://github.com/timrishell" class="text-light mr-2"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/timrishell" class="text-light mr-2"><i class="fab fa-linkedin"></i></a>
-        <a href="https://twitter.com/timrishell" class="text-light"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/Cheftr" class="text-light mr-2"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/timrishellr" class="text-light mr-2"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
   </footer>
   <!-- Bootstrap and jQuery -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
   <script>
     $(document).ready(function () {
       $('[data-toggle="popover"]').popover();
