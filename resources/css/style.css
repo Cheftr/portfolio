@@ -64,3 +64,9 @@ height: 200px; }
     opacity: 1;
     transform: translateY(0%);
   }
+.topics {
+  text-decoration: underline;
+}
+a:link {
+
+}
