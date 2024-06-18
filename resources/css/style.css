@@ -35,3 +35,32 @@ height: 200px; }
     opacity: 0;
     transition: opacity 1s ease-in-out; /* Adjust the transition duration and timing function */
   }
+  #feedback {
+    position: relative;
+    min-height: 100px; /* Minimum height to ensure space for text */
+    overflow: hidden;
+    background-color: #343A40; /* Background color */
+    color: #ffffff; /* Text color */
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    margin-top: 20px; /* Adjust margin as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .feedback-text {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 1s ease, transform 1s ease;
+    max-width: 100%;
+    word-wrap: break-word;
+    word-break: break-word;
+    display: inline-block;
+  }
+
+  .show {
+    opacity: 1;
+    transform: translateY(0%);
+  }
