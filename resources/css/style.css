@@ -106,3 +106,28 @@ a:hover {
   border-radius: 50%;
   object-fit: cover; /* Ensures the image covers the entire container */
 }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+.card {
+  transition: transform 0.2s;
+  margin-bottom: 20px; /* To ensure space between rows */
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-text {
+  margin: 0;
+}
