@@ -91,3 +91,12 @@
 .expandable-image {
   cursor: pointer;
 }
+a {
+    color: #00BFFF; /* Bright blue color */
+    text-decoration: none; /* Removes the underline from the link */
+}
+
+a:hover {
+    color: #1E90FF; /* Slightly different shade for hover state for better user experience */
+    text-decoration: underline; /* Adds underline on hover for better visibility */
+}
