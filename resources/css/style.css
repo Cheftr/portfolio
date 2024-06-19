@@ -48,7 +48,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  }
+}
 
 .feedback-text {
   opacity: 0;
@@ -58,7 +58,7 @@
   word-wrap: break-word;
   word-break: break-word;
   display: inline-block;
-  }
+}
 
 .show {
   opacity: 1;
