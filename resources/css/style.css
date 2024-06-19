@@ -100,3 +100,9 @@ a:hover {
     color: #1E90FF; /* Slightly different shade for hover state for better user experience */
     text-decoration: underline; /* Adds underline on hover for better visibility */
 }
+.about-picture {
+  width: 300px; /* Adjust the size as needed */
+  height: 300px; /* Ensure the height matches the width for a perfect circle */
+  border-radius: 50%;
+  object-fit: cover; /* Ensures the image covers the entire container */
+}
