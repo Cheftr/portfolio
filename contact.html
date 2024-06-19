@@ -49,48 +49,65 @@
   </header>
   <main>
     <div class="container mt-5">
-      <h1 class="text-center text-light">Contact</h1>
-      <p class="text-center text-light">Get in touch with Tim Rishell.</p>
-      <p class="text-center text-light">This page is non-functional currently.</p>
+      <h1 class="text-center text-light">Contact Me</h1>
+      <p class="text-center text-light">Connect with me through various platforms</p>
 
-      <!-- Add your contact content here -->
-      <form id="contactForm" class="text-light" method="post" action="send_email.php">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+      <!-- Social Media Links Section -->
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-4">
+          <div class="card social-card">
+            <div class="card-body">
+              <a href="mailto:timrishellr@gmail.com">
+                <img src="resources/images/email_icon.png" alt="Email Logo">
+                timrishellr@gmail.com
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="email">Email address</label>
-          <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+        <div class="col-md-4 mb-4">
+          <div class="card social-card">
+            <div class="card-body">
+              <a href="https://www.linkedin.com/in/timrishellr/" target="_blank">
+                <img src="resources/images/LinkedIn-Blue-21@2x.png" alt="LinkedIn Logo">
+                Tim Rishell
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea class="form-control" id="message" name="message" rows="3" placeholder="Your message"
-            required></textarea>
+        <div class="col-md-4 mb-4">
+          <div class="card social-card">
+            <div class="card-body">
+              <a href="https://github.com/Cheftr" target="_blank">
+                <img src="resources/images/GitHub_Logo_White.png" alt="GitHub Logo">
+                Cheftr
+              </a>
+            </div>
+          </div>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+        <!-- Add more social cards as needed -->
+      </div>
     </div>
   </main>
   <footer class="bg-dark text-light text-center py-3">
     <div class="container">
       <p>© 2024 Tim Rishell | <a href="mailto:timrishellr@gmail.com" class="text-light">Contact</a></p>
       <div>
-        <a href="https://github.com/Cheftr" class="text-light mr-2" aria-label="link to my github account"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/timrishellr" class="text-light mr-2" aria-label="link to my linkedin account"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Cheftr" class="text-light mr-2" aria-label="link to my github account"><i
+            class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/timrishellr" class="text-light mr-2"
+          aria-label="link to my linkedin account"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
   </footer>
   <!-- Bootstrap and jQuery -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJ"></script>
   <script>
     $(document).ready(function () {
       $('[data-toggle="popover"]').popover();
