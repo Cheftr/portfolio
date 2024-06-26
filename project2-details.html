@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Tim Rishell's Recipe Database Program Project">
+  <title>Tim Rishell - Recipe Database Program Project</title>
+  <link href="./resources/css/reset.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="./resources/css/style.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link href="css/mdb.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark">
+  <header>
+    <!-- Header of page -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container">
+        <a class="nav-link" href="index.html"><img src="resources/images/it_me_trans.png" alt="Tim Rishell picture"
+            class="profile-picture"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="credentials.html">Credentials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container mt-5">
+      <h1 class="text-center text-light">Recipe Database Program</h1><br>
+
+      <!-- Carousel -->
+      <div id="carouselExampleIndicators" class="carousel slide mb-5" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <video class="d-block w-100" controls autoplay muted loop preload="auto">
+              <source src="resources/images/recipe_db_gif1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="carousel-item">
+            <video class="d-block w-100" controls autoplay muted loop preload="auto">
+              <source src="resources/images/recipe_db_gif2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="carousel-item">
+            <video class="d-block w-100" controls autoplay muted loop preload="auto">
+              <source src="resources/images/recipe_db_gif3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+      <!-- Project Description -->
+      <div class="text-light">
+        <h2>About the Project</h2>
+        <p>
+          The Recipe Database Program is a Python and SQLite3 based application designed to help users store and retrieve their favorite recipes easily. The primary objective of this project is to provide a user-friendly local database where users can save and organize their recipes, making it simple to find inspiration for meals based on available ingredients, particularly focusing on proteins or main substances.
+        </p>
+        <p>
+          This program operates in a command prompt window and has been compiled into an executable file, ensuring that it can be easily downloaded and used by anyone without needing to install additional software. The intuitive command-line interface allows for efficient data entry and retrieval, making it an invaluable tool for home cooks and culinary enthusiasts.
+        </p>
+        <p>
+          You can find the link to the project <a href="https://github.com/Cheftr/Recipe-DB" aria-label="link to my project" target="_blank">here</a>!
+        </p>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-dark text-light text-center py-3">
+    <div class="container">
+      <p>© 2024 Tim Rishell | <a href="mailto:timrishellr@gmail.com" class="text-light">Contact</a></p>
+      <div>
+        <a href="https://github.com/Cheftr" class="text-light mr-2" aria-label="link to my github account" target="_blank"><i
+            class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/timrishellr" class="text-light mr-2" aria-label="link to my linkedin account" target="_blank"><i
+            class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+  <!-- Bootstrap and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      $('[data-toggle="popover"]').popover();
+    });
+  </script>
+</body>
+
+</html>

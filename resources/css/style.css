@@ -162,6 +162,8 @@ a:hover {
   transition: transform 0.2s, background-image 0.2s;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  z-index: 1;
+  position: relative;
 }
 
 .project-card:hover {
@@ -185,7 +187,15 @@ a:hover {
   font-size: 1rem;
 }
 .carousel-inner img {
-  width: 14s00px;
+  width: 1400px;
   height: 780px; /* Set a fixed height for the carousel */
   object-fit: none; /* Ensure the images cover the area without distortion */
+}
+.dropdown-menu {
+  z-index: 1050; /* Ensure the dropdown menu is above other elements */
+}
+
+.dropdown-filter {
+  position: relative; /* Ensure the dropdown filter has a positioning context */
+  z-index: 1050; /* Ensure the dropdown filter is above other elements */
 }
