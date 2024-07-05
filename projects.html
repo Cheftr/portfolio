@@ -95,6 +95,67 @@
         </div>
         <!-- Repeat Project Cards as needed -->
       </div>
+
+      <!-- Ideas Board Section -->
+      <hr class="bg-light my-5">
+      <h2 class="text-center text-light">Ideas Board</h2>
+      <p class="text-center text-light">This is my public ideas board for projects I wish to create someday, some practical some impractical, all in the pursuit of knowledge and fun.</p>
+
+      <div class="row mt-4 ideas-board">
+        <div class="col-md-6">
+          <h3 class="text-center text-light">Ideas</h3>
+          <ul class="list-group">
+
+            <li class="list-group-item bg-dark text-light" onclick="showIdeaDialog('.CSV Data Cleaner', 'Create an executable that will take .CSV files, prompt the user questions about delimiters, cleaning needed, etc. Program will perform actions and give responses throughout cleaning process to create a table that can be cleanly copied into a spreadsheet.')">
+              .CSV Data Cleaner
+              <span class="idea-date">Added: 07/04/2024</span>
+            </li>
+            <!--
+            <li class="list-group-item bg-dark text-light" onclick="showIdeaDialog('Idea 2', 'This is the thought process behind Idea 2.')">
+              Idea 2
+              <span class="idea-date">Added: 2024-02-20</span>
+            </li>
+          -->
+            <!-- Add more ideas as needed -->
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h3 class="text-center text-light">Completed Ideas</h3>
+          <ul class="list-group">
+            <!--
+            <li class="list-group-item bg-dark text-light" onclick="showIdeaDialog('Completed Idea 1', 'This is the thought process behind Completed Idea 1.')">
+              Completed Idea 1
+              <span class="idea-date">Completed: </span>
+            </li>
+            <li class="list-group-item bg-dark text-light" onclick="showIdeaDialog('Completed Idea 2', 'This is the thought process behind Completed Idea 2.')">
+              Completed Idea 2
+              <span class="idea-date">Completed: </span>
+            </li>
+          -->
+            <!-- Add more completed ideas as needed -->
+          </ul>
+        </div>
+      </div>
+
+      <!-- Dialog Modal -->
+      <div class="modal fade" id="ideaModal" tabindex="-1" role="dialog" aria-labelledby="ideaModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="ideaModalLabel">Idea Title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="ideaModalBody">
+              Thought process goes here.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
   <footer class="bg-dark text-light text-center py-3">
@@ -112,7 +173,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4xF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script>
@@ -125,6 +186,12 @@
           projects[i].style.display = 'none';
         }
       }
+    }
+
+    function showIdeaDialog(title, thoughtProcess) {
+      document.getElementById('ideaModalLabel').innerText = title;
+      document.getElementById('ideaModalBody').innerText = thoughtProcess;
+      $('#ideaModal').modal('show');
     }
   </script>
 </body>
