@@ -57,7 +57,7 @@
   </header>
   <main>
     <div class="container mt-5">
-      <h1 class="text-center text-light">Recipe Database Program</h1><br>
+      <h1 class="text-center text-light" tabindex="0">Recipe Database Program</h1><br>
 
       <!-- Carousel -->
       <div id="carouselExampleIndicators" class="carousel slide mb-5" data-ride="carousel">
@@ -97,7 +97,7 @@
       </div>
 
       <!-- Project Description -->
-      <div class="text-light">
+      <div class="text-light" tabindex="0">
         <h2>About the Project</h2>
         <p>
           The Recipe Database Program is a Python and SQLite3 based application designed to help users store and retrieve their favorite recipes easily. The primary objective of this project is to provide a user-friendly local database where users can save and organize their recipes, making it simple to find inspiration for meals based on available ingredients, particularly focusing on proteins or main substances.
@@ -132,6 +132,27 @@
   <script>
     $(document).ready(function () {
       $('[data-toggle="popover"]').popover();
+
+      // Adding keyboard accessibility
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+          var activeElement = document.activeElement;
+          if (activeElement.classList.contains('expandable-image')) {
+            $(activeElement).trigger('click');
+          } else if (activeElement.classList.contains('nav-link')) {
+            window.location.href = activeElement.getAttribute('href');
+          } else if (activeElement.classList.contains('btn')) {
+            activeElement.click();
+          }
+        }
+      });
+
+      // Ensure all interactive elements are focusable
+      var interactiveElements = document.querySelectorAll('.expandable-image, .nav-link, .btn');
+      interactiveElements.forEach(function (element) {
+        element.setAttribute('tabindex', '0');
+        element.setAttribute('role', 'button');
+      });
     });
   </script>
 </body>

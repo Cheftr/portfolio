@@ -57,11 +57,11 @@
   </header>
   <main>
     <div class="container mt-5">
-      <h1 class="text-center text-light">An Analysis of Penguin Growth</h1>
+      <h1 class="text-center text-light" tabindex="0">An Analysis of Penguin Growth</h1>
       <br>
       <br>
       <br>
-      <h4 class="text-center text-light">Created using Excel and Word</h4>
+      <h4 class="text-center text-light" tabindex="0">Created using Excel and Word</h4>
       <!-- Image Carousel -->
       <div id="carouselExampleControls" class="carousel slide mb-4" data-ride="carousel">
         <div class="carousel-inner">
@@ -100,12 +100,13 @@
         </a>
       </div>
       <br>
-      <h1 class="text-light text-center">Full Analysis Report PDF</h1>
-      <p class="text-light text-center">Click the image to view the project report.</p>
+      <h1 class="text-light text-center" tabindex="0">Full Analysis Report PDF</h1>
+      <p class="text-light text-center" tabindex="0">Click the image to view the project report.</p>
       <!-- Project Report -->
       <div class="text-center">
         <img src="resources/images/penguin_growth_analysis-page-001.jpg" alt="Project Report Cover" class="img-fluid mb-3"
-          style="cursor: pointer;" onclick="window.open('resources/images/penguin_growth_analysis.pdf')">
+          style="cursor: pointer;" onclick="window.open('resources/images/penguin_growth_analysis.pdf')" tabindex="0"
+          role="button">
       </div>
     </div>
   </main>
@@ -127,6 +128,32 @@
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function () {
+        $('[data-toggle="popover"]').popover();
+  
+        // Adding keyboard accessibility
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Enter') {
+            var activeElement = document.activeElement;
+            if (activeElement.classList.contains('img-fluid')) {
+              $(activeElement).trigger('click');
+            } else if (activeElement.classList.contains('nav-link')) {
+              window.location.href = activeElement.getAttribute('href');
+            } else if (activeElement.classList.contains('btn')) {
+              activeElement.click();
+            }
+          }
+        });
+  
+        // Ensure all interactive elements are focusable
+        var interactiveElements = document.querySelectorAll('.expandable-image, .nav-link, .btn');
+        interactiveElements.forEach(function (element) {
+          element.setAttribute('tabindex', '0');
+          element.setAttribute('role', 'button');
+        });
+      });
+    </script>
 </body>
 
 </html>
