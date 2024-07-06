@@ -1,128 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Tim Rishell's Projects">
-  <title>Tim Rishell - Projects</title>
-  <link href="./resources/css/reset.css" type="text/css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link href="./resources/css/style.css" type="text/css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  <link href="css/mdb.min.css" rel="stylesheet">
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H721TL27NS"></script>
-<script>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Tim Rishell's Projects">
+    <title>Tim Rishell - Projects</title>
+    <link href="./resources/css/reset.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous">
+    <link href="./resources/css/style.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="css/mdb.min.css" rel="stylesheet">
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script async
+    src="https://www.googletagmanager.com/gtag/js?id=G-H721TL27NS"></script>
+  <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-H721TL27NS');
 </script>
 
-<body class="bg-dark">
-  <header>
-    <!-- Header of page -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <div class="container">
-        <a class="nav-link" href="index.html"><img src="resources/images/it_me_trans.png" alt="Tim Rishell picture"
-            class="profile-picture"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="credentials.html">Credentials</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="projects.html">Projects <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <div class="container mt-5">
-      <h1 class="text-center text-light">Projects</h1>
-      <p class="text-center text-light">Here you can find the projects I've worked on.</p>
-
-      <!-- Dropdown Filter -->
-      <div class="dropdown text-center mb-4 dropdown-filter">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          Filter by Project Type
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#" onclick="filterProjects('all')">All</a>
-          <a class="dropdown-item" href="#" onclick="filterProjects('web')">Web Development</a>
-          <a class="dropdown-item" href="#" onclick="filterProjects('app')">App Development</a>
-          <a class="dropdown-item" href="#" onclick="filterProjects('data')">Data Science</a>
-        </div>
-      </div>
-
-      <!-- Project Cards -->
-      <div class="row" id="projectsContainer">
-        <!-- Project Card 1 -->
-        <div class="col-md-4 mb-4 project-card" data-category="data" onclick="location.href='project1-details.html'">
-          <img src="resources/images/project1_title_picture.png" alt="Project Image" class="img-fluid">
-          <div class="project-card-body">
-            <h5 class="project-card-title">An Analysis of Penguin Growth</h5>
-            <p class="project-card-text">Insights into the development rate of penguins relative to their species.</p>
+  <body class="bg-dark">
+    <header>
+      <!-- Header of page -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+          <a class="nav-link" href="index.html"><img
+              src="resources/images/it_me_trans.png" alt="Tim Rishell picture"
+              class="profile-picture"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="credentials.html">Credentials</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="projects.html">Projects <span
+                    class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
           </div>
         </div>
-        <!-- Project Card 2 -->
-        <div class="col-md-4 mb-4 project-card" data-category="app" onclick="location.href='project2-details.html'">
-          <img src="resources/images/project2_title_picture.png" alt="Project Image" class="img-fluid">
-          <div class="project-card-body">
-            <h5 class="project-card-title">Recipe Database</h5>
-            <p class="project-card-text">An intuitive Python and SQLite3-based local database program for storing and retrieving recipes, compiled into an executable for easy use.</p>
+      </nav>
+    </header>
+    <main>
+      <div class="container mt-5">
+        <h1 class="text-center text-light">Projects</h1>
+        <p class="text-center text-light">Here you can find the projects I've
+          worked on.</p>
+
+        <!-- Dropdown Filter --> 
+        <div class="dropdown text-center mb-4 dropdown-filter">
+          <button class="btn btn-secondary dropdown-toggle" type="button"
+            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            Filter by Project Type
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#"
+              onclick="filterProjects('all')">All</a>
+            <a class="dropdown-item" href="#"
+              onclick="filterProjects('web')">Web Development</a>
+            <a class="dropdown-item" href="#"
+              onclick="filterProjects('app')">App Development</a>
+            <a class="dropdown-item" href="#"
+              onclick="filterProjects('data')">Data Science</a>
           </div>
         </div>
-        <!-- Repeat Project Cards as needed -->
-      </div>
 
-      <!-- Ideas Board Section -->
-      <hr class="bg-light my-5">
-      <h2 class="text-center text-light">Ideas Board</h2>
-      <p class="text-center text-light">This is my public ideas board for projects I wish to create someday, some practical some impractical, all in the pursuit of knowledge and fun.</p>
-
-      <div class="row mt-4 ideas-board">
-        <div class="col-md-6">
-          <h3 class="text-center text-light">Ideas</h3>
-          <ul class="list-group">
-
-            <li class="list-group-item bg-dark text-light" onclick="showIdeaDialog('.CSV Data Cleaner', 'Create an executable that will take .CSV files, prompt the user questions about delimiters, cleaning needed, etc. Program will perform actions and give responses throughout cleaning process to create a table that can be cleanly copied into a spreadsheet.')">
-              .CSV Data Cleaner
-              <span class="idea-date">Added: 07/04/2024</span>
-            </li>
-            <!--
-            <li class="list-group-item bg-dark text-light" onclick="showIdeaDialog('Idea 2', 'This is the thought process behind Idea 2.')">
-              Idea 2
-              <span class="idea-date">Added: 2024-02-20</span>
-            </li>
-          -->
-            <!-- Add more ideas as needed -->
-          </ul>
+        <!-- Project Cards -->
+        <div class="row" id="projectsContainer">
+          <!-- Project Card 1 -->
+          <div class="col-md-4 mb-4 project-card" data-category="data"
+            onclick="location.href='project1-details.html'" tabindex="0"
+            role="button">
+            <img src="resources/images/project1_title_picture.png"
+              alt="Project Image" class="img-fluid">
+            <div class="project-card-body">
+              <h5 class="project-card-title">An Analysis of Penguin Growth</h5>
+              <p class="project-card-text">Insights into the development rate of
+                penguins relative to their species.</p>
+            </div>
+          </div>
+          <!-- Project Card 2 -->
+          <div class="col-md-4 mb-4 project-card" data-category="app"
+            onclick="location.href='project2-details.html'" tabindex="0"
+            role="button">
+            <img src="resources/images/project2_title_picture.png"
+              alt="Project Image" class="img-fluid">
+            <div class="project-card-body">
+              <h5 class="project-card-title">Recipe Database</h5>
+              <p class="project-card-text">An intuitive Python and SQLite3-based
+                local database program for storing and retrieving recipes,
+                compiled into an executable for easy use.</p>
+            </div>
+          </div>
+          <!-- Repeat Project Cards as needed -->
         </div>
-        <div class="col-md-6">
-          <h3 class="text-center text-light">Completed Ideas</h3>
-          <ul class="list-group">
-            <!--
+
+        <!-- Ideas Board Section -->
+        <hr class="bg-light my-5">
+        <h2 class="text-center text-light">Ideas Board</h2>
+        <p class="text-center text-light">This is my public ideas board for
+          projects I wish to create someday, some practical some impractical,
+          all in the pursuit of knowledge and fun.</p>
+
+        <div class="row mt-4 ideas-board">
+          <div class="col-md-6">
+            <h3 class="text-center text-light">Ideas</h3>
+            <ul class="list-group">
+
+              <li class="list-group-item bg-dark text-light"
+                onclick="showIdeaDialog('.CSV Data Cleaner', 'Create an executable that will take .CSV files, prompt the user questions about delimiters, cleaning needed, etc. Program will perform actions and give responses throughout cleaning process to create a table that can be cleanly copied into a spreadsheet.')" tabindex="0" role="button">
+                .CSV Data Cleaner
+                <span class="idea-date">Added: 07/04/2024</span>
+              </li>
+
+              <li class="list-group-item bg-dark text-light"
+                onclick="showIdeaDialog('Default Discount Code Web Extension', 'Create a web extension that will, over time, collect basic discount codes and developer test codes [Example: Test50, 10off, SPRING10] for the promo code section of checkout pages. The extension will run through the large list checking for any discounts that are successful. This is a tool to be used in combination with coupon web extensions that search for legitimate current codes.')" tabindex="0" role="button">
+                Default Discount Code Web Extension
+                <span class="idea-date">Added: 2024-02-20</span>
+              </li>
+
+              <!-- Add more ideas as needed -->
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h3 class="text-center text-light">Completed Ideas</h3>
+            <ul class="list-group">
+              <!--
             <li class="list-group-item bg-dark text-light" onclick="showIdeaDialog('Completed Idea 1', 'This is the thought process behind Completed Idea 1.')">
               Completed Idea 1
               <span class="idea-date">Completed: </span>
@@ -132,51 +159,62 @@
               <span class="idea-date">Completed: </span>
             </li>
           -->
-            <!-- Add more completed ideas as needed -->
-          </ul>
+              <!-- Add more completed ideas as needed -->
+            </ul>
+          </div>
         </div>
-      </div>
 
-      <!-- Dialog Modal -->
-      <div class="modal fade" id="ideaModal" tabindex="-1" role="dialog" aria-labelledby="ideaModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="ideaModalLabel">Idea Title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body" id="ideaModalBody">
-              Thought process goes here.
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- Dialog Modal -->
+        <div class="modal fade" id="ideaModal" tabindex="-1" role="dialog"
+          aria-labelledby="ideaModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="ideaModalLabel">Idea Title</h5>
+                <button type="button" class="close" data-dismiss="modal"
+                  aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body" id="ideaModalBody">
+                Thought process goes here.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary"
+                  data-dismiss="modal">Close</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </main>
-  <footer class="bg-dark text-light text-center py-3">
-    <div class="container">
-      <p>© 2024 Tim Rishell | <a href="mailto:timrishellr@gmail.com" class="text-light">Contact</a></p>
-      <div>
-        <a href="https://github.com/Cheftr" class="text-light mr-2" aria-label="link to my github account" target="_blank"><i
-            class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/timrishellr" class="text-light mr-2" aria-label="link to my linkedin account" target="_blank"><i
-            class="fab fa-linkedin"></i></a>
+    </main>
+    <footer class="bg-dark text-light text-center py-3">
+      <div class="container">
+        <p>© 2024 Tim Rishell | <a href="mailto:timrishellr@gmail.com"
+            class="text-light">Contact</a></p>
+        <div>
+          <a href="https://github.com/Cheftr" class="text-light mr-2"
+            aria-label="link to my github account" target="_blank"><i
+              class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/timrishellr" class="text-light mr-2"
+            aria-label="link to my linkedin account" target="_blank"><i
+              class="fab fa-linkedin"></i></a>
+        </div>
       </div>
-    </div>
-  </footer>
-  <!-- Bootstrap and jQuery -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4xF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script>
+    </footer>
+    <!-- Bootstrap and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4xF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+    <script>
     function filterProjects(category) {
       var projects = document.getElementsByClassName('project-card');
       for (var i = 0; i < projects.length; i++) {
@@ -193,7 +231,17 @@
       document.getElementById('ideaModalBody').innerText = thoughtProcess;
       $('#ideaModal').modal('show');
     }
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        var activeElement = document.activeElement;
+        if (activeElement.classList.contains('project-card')) {
+          window.location.href = activeElement.getAttribute('onclick').split('=')[1].replace(/'/g, '').trim();
+        } else if (activeElement.classList.contains('list-group-item')) {
+          activeElement.click();
+        }
+      }
+    });
   </script>
-</body>
+  </body>
 
 </html>
