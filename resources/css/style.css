@@ -216,3 +216,8 @@ a:hover {
   font-size: 0.9em;
   color: #aaa;
 }
+
+.carousel-item img {
+  object-fit: contain; /* or 'cover', based on how you want the image to fill */
+  max-height: 600px; /* Adjust this value based on your desired image height */
+}
