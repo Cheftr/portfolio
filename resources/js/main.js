@@ -13,9 +13,9 @@
 
 import { initThemeSwitcher } from './modules/theme.js';
 import { initMobileNav } from './modules/navigation.js';
-import { initFeedbackLoader } from './modules/feedbackLoader.js';
+import { initFeedbackLoader } from './modules/feedbackloader.js';
 import { initModals } from './modules/modal.js';
-import { initProjectFilter } from './modules/projectFilter.js';
+import { initProjectFilter } from './modules/projectfilter.js';
 import { initCarousel } from './modules/carousel.js';
 
 /**
