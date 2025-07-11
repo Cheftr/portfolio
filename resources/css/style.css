@@ -1,223 +1,557 @@
+/* --- Base Styles & Theming --- */
+:root {
+  --background-color: #ffffff;
+  --text-color: #212529;
+  --header-bg: #f8f9fa;
+  --card-bg: #f8f9fa;
+  --link-color: #007bff;
+  --link-hover-color: #0056b3;
+  --separator-color: #dee2e6;
+  --feedback-bg: #e9ecef;
+  --feedback-text-color: #495057;
+  --jumbotron-text-color: #ffffff;
+  --modal-overlay-bg: rgba(0, 0, 0, 0.5);
+  --focus-ring-color: #007bff;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family-serif: "Crimson Text", serif;
+}
 
-.jumbotron {
-  align-items: baseline;
-  height: 21rem;
-  padding: 7rem 2rem;
-  background-position: center;
-}
-#jumboname {
- color: white;
- font-family: 'Crimson Text', serif;
+[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --header-bg: #1e1e1e;
+  --card-bg: #2a2a2a;
+  --link-color: #00bfff;
+  --link-hover-color: #1e90ff;
+  --separator-color: #444;
+  --feedback-bg: #343a40;
+  --feedback-text-color: #ffffff;
+  --modal-overlay-bg: rgba(0, 0, 0, 0.7);
+  --focus-ring-color: #00bfff;
 }
 
-.dice_card {
-  margin-top: 3rem;
-  text-align: center;
+/* --- CSS Reset --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-.example-1 {
-  position: relative;
-  overflow-y: scroll;
-  height: 200px; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-sans-serif);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+p {
+  margin-bottom: 1rem;
+}
+
+/* --- Layout & Grid System --- */
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Added for consistent spacing between sections on all pages */
+.page-section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-lg-4 {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive Grid Breakpoints */
+@media (min-width: 768px) {
+  .col-md-4 {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+  .col-md-5 {
+    flex: 0 0 41.666%;
+    max-width: 41.666%;
+  }
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .col-md-7 {
+    flex: 0 0 58.333%;
+    max-width: 58.333%;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-lg-4 {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+}
+
+/* --- Header & Navigation --- */
+.header {
+  background-color: var(--header-bg);
+  padding: 0.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--separator-color);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
 .profile-picture {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
-
 .profile-picture:hover {
-  transform: scale(1.5);
+  transform: scale(1.1);
 }
-:focus {
-  outline: 2px solid #007bff; /* Example focus style */
+
+.nav-menu {
+  display: none;
+  list-style: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--header-bg);
+  border-top: 1px solid var(--separator-color);
 }
-.feedback-item {
-  opacity: 0;
-  transition: opacity 1s ease-in-out; /* Adjust the transition duration and timing function */
+
+.nav-menu.is-active {
+  display: flex;
 }
-#feedback {
-  position: relative;
-  min-height: 100px; /* Minimum height to ensure space for text */
-  overflow: hidden;
-  background-color: #343A40; /* Background color */
-  color: #ffffff; /* Text color */
+
+.nav-item {
+  padding: 1rem;
   text-align: center;
-  padding: 20px;
-  border-radius: 10px; /* Rounded corners */
-  margin-top: 20px; /* Adjust margin as needed */
+  border-bottom: 1px solid var(--separator-color);
+}
+
+.nav-link {
+  color: var(--text-color);
+  font-weight: 500;
+}
+.nav-link.active {
+  color: var(--link-color);
+}
+
+.navbar-toggler {
+  display: block;
+  background: none;
+  border: 1px solid var(--text-color);
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  z-index: 1001; /* Ensure it's above the nav menu */
+}
+.toggler-icon {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--text-color);
+  margin: 5px 0;
+}
+
+@media (min-width: 768px) {
+  .navbar-toggler {
+    display: none;
+  }
+  .nav-menu {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    border: none;
+  }
+  .nav-item {
+    padding: 0 1rem;
+    border-bottom: none;
+  }
+}
+
+/* --- Theme Toggle --- */
+.theme-switcher-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+.theme-toggle:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+
+/* --- Jumbotron --- */
+.jumbotron {
+  background-image: url("../images/northern_lights.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 7rem 2rem;
+  text-align: center;
+}
+#jumboname {
+  color: var(--jumbotron-text-color);
+  font-family: var(--font-family-serif);
+  font-size: 3.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+#jumbodesc {
+  color: var(--jumbotron-text-color);
+  font-size: 1rem;
+  margin-top: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* --- Cards (for Projects/Credentials pages) --- */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--separator-color);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+.card-body {
+  padding: 1.25rem;
+  flex-grow: 1;
+}
+.card-title {
+  color: var(--text-color);
+}
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+.card-link:hover {
+  text-decoration: none;
+}
+
+/* --- Feedback Section (FIXED) --- */
+.feedback-container {
+  min-height: 150px;
+  background-color: var(--feedback-bg);
+  color: var(--feedback-text-color);
+  text-align: center;
+  padding: 2rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .feedback-text {
-  opacity: 0;
-  transform: translateY(100%);
-  transition: opacity 1s ease, transform 1s ease;
-  max-width: 100%;
-  word-wrap: break-word;
-  word-break: break-word;
-  display: inline-block;
-}
-
-.show {
-  opacity: 1;
-  transform: translateY(0%);
-  }
-.topics {
-  text-decoration: underline;
-}
-.resume-image {
-  transition: transform 0.3s ease;
-}
-
-.resume-image:hover {
-  transform: scale(1.05);
-}
-
-.cert-card {
-  transition: transform 0.3s ease;
-}
-
-.cert-card:hover {
-  transform: scale(1.05);
-}
-
-.separator {
-  border-bottom: 1px solid #fff;
-  margin: 40px 0;
-}
-
-.expandable-image {
-  cursor: pointer;
-}
-a {
-    color: #00BFFF; /* Bright blue color */
-    text-decoration: none; /* Removes the underline from the link */
-}
-
-a:hover {
-    color: #1E90FF; /* Slightly different shade for hover state for better user experience */
-    text-decoration: underline; /* Adds underline on hover for better visibility */
-}
-.about-picture {
-  width: 300px; /* Adjust the size as needed */
-  height: 300px; /* Ensure the height matches the width for a perfect circle */
-  border-radius: 50%;
-  object-fit: cover; /* Ensures the image covers the entire container */
-}
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1rem;
-}
-.card {
-  transition: transform 0.2s;
-  margin-bottom: 20px; /* To ensure space between rows */
-}
-.card:hover {
-  transform: scale(1.05);
-}
-.card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.card img {
   width: 100%;
-  height: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  position: absolute; /* Positioned within the flex container */
+  left: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-.card-text {
-  margin: 0;
-}
-.social-card {
-  background-color: #343a40;
-  color: #fff;
-  border: 0;
-  transition: transform 0.2s;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.feedback-text.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.social-card:hover {
-  transform: translateY(-5px);
+/* --- Generic Form Styling (for Contact page) --- */
+.form-group {
+  margin-bottom: 1.5rem;
 }
 
-.social-card .card-body {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 75px;
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
 }
 
-.social-card img {
-  max-width: 50px;
-  height: auto;
-  margin-right: 10px;
+.form-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 1px solid var(--separator-color);
+  border-radius: 4px;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
-.project-card {
-  background-color: #343a40;
-  color: #fff;
-  border: 0;
-  transition: transform 0.2s, background-image 0.2s;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--link-color);
+  box-shadow: 0 0 0 3px var(--focus-ring-color-alpha, rgba(0, 123, 255, 0.25));
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Whimsical Link Section Styles */
+.fantasy-link-container {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 2.5rem 1.5rem;
+  background-color: var(--background-alt-color);
+  border-radius: 12px;
+  border: 2px dashed var(--separator-color);
+}
+.fantasy-link-container h2 {
+  font-family: "Georgia", serif; /* A more classic, fantasy-style font */
+  font-size: 2rem;
+  color: var(--heading-color);
+  margin-bottom: 0.5rem;
+}
+.fantasy-link-container p {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+}
+.btn-fantasy {
+  font-weight: bold;
+  padding: 12px 28px;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  background-image: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.btn-fantasy:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
   cursor: pointer;
-  z-index: 1;
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease-in-out;
+}
+.btn-primary {
+  color: #fff;
+  background-color: var(--link-color);
+  border-color: var(--link-color);
+}
+.btn-primary:hover {
+  background-color: var(--link-hover-color);
+  border-color: var(--link-hover-color);
+}
+
+/* --- Utility & Misc Classes --- */
+.text-center {
+  text-align: center;
+}
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+.separator {
+  border: 0;
+  border-top: 1px solid var(--separator-color);
+  margin: 2rem auto;
+  width: 50%;
+}
+/* For About Me page */
+.about-picture {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1.5rem auto;
+}
+
+/* --- Footer --- */
+.footer {
+  background-color: var(--header-bg);
+  padding: 2rem 0;
+  margin-top: 4rem;
+  text-align: center;
+  border-top: 1px solid var(--separator-color);
+}
+.social-link {
+  margin: 0 0.75rem;
+  font-size: 1.5rem; /* Larger icon size */
+  color: var(--text-color);
+}
+.social-link:hover {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+/* --- Carousel Styling --- */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
   position: relative;
 }
-
-.project-card:hover {
-  transform: translateY(-5px);
+.carousel-slide {
+  min-width: 100%;
+  position: relative;
 }
-
-.project-card img {
+.carousel-slide img,
+.carousel-slide video {
   width: 100%;
   height: auto;
+  display: block;
 }
-
-.project-card-body {
-  padding: 15px;
-}
-
-.project-card-title {
-  font-size: 1.25rem;
-  margin-bottom: 10px;
-}
-.project-card-text {
-  font-size: 1rem;
-}
-.carousel-inner img {
-  width: 1400px;
-  height: 780px; /* Set a fixed height for the carousel */
-  object-fit: none; /* Ensure the images cover the area without distortion */
-}
-.dropdown-menu {
-  z-index: 1050; /* Ensure the dropdown menu is above other elements */
-}
-
-.dropdown-filter {
-  position: relative; /* Ensure the dropdown filter has a positioning context */
-  z-index: 1050; /* Ensure the dropdown filter is above other elements */
-}
-.ideas-board .list-group-item {
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
   cursor: pointer;
-  margin-bottom: 10px;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  z-index: 10;
+}
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.carousel-btn--left {
+  left: 10px;
+}
+.carousel-btn--right {
+  right: 10px;
+}
+.carousel-nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 15px;
+  justify-content: center;
+  padding: 1rem;
 }
-
-.ideas-board .list-group-item:hover {
-  background-color: #1a1a1a;
+.carousel-indicator {
+  border: none;
+  background: var(--separator-color);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
 }
-
-.idea-date {
-  font-size: 0.9em;
-  color: #aaa;
+.carousel-indicator.current-slide {
+  background: var(--link-color);
 }
-
-.carousel-item img {
-  object-fit: contain; /* or 'cover', based on how you want the image to fill */
-  max-height: 600px; /* Adjust this value based on your desired image height */
+.pdf-link-container {
+  text-align: center;
+  margin-top: 2rem;
 }

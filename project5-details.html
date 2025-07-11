@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Tim Rishell - Connect with me via email, LinkedIn, or GitHub.">
-    <title>Tim Rishell - Contact</title>
+    <meta name="description" content="Details of the TTRPG Quest & NPC Generator, a free web app with multiple themes.">
+    <title>TTRPG Quest & NPC Generator - Tim Rishell</title>
     
     <!-- Unified Stylesheet -->
     <link href="./resources/css/style.css" rel="stylesheet" />
@@ -20,48 +20,10 @@
         gtag('js', new Date());
         gtag('config', 'G-H721TL27NS');
     </script>
-    <style>
-        /* Page-specific styles for contact cards */
-        .contact-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        .contact-card {
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            padding: 2rem;
-            text-align: center;
-            flex-basis: 300px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid var(--separator-color);
-        }
-        .contact-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-        }
-        .contact-card a {
-            text-decoration: none;
-            color: var(--text-color);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-        }
-        .contact-card a:hover {
-            color: var(--link-color);
-        }
-        .contact-card .fab, .contact-card .fas {
-            font-size: 3rem;
-            color: var(--link-color);
-        }
-    </style>
 </head>
 <body>
 
-    <!-- Consistent Header from index.html -->
+    <!-- Consistent Header -->
     <header class="header">
         <nav class="container navbar">
             <a class="navbar-brand" href="index.html" aria-label="Go to homepage">
@@ -80,9 +42,9 @@
             <ul class="nav-menu" id="nav-menu">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="credentials.html">Credentials</a></li>
-                <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                <li class="nav-item"><a class="nav-link active" href="projects.html" aria-current="page">Projects</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
-                <li class="nav-item"><a class="nav-link active" href="contact.html" aria-current="page">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -90,35 +52,46 @@
     <main>
         <section class="container page-section">
             <header class="text-center">
-                <h1>Contact Me</h1>
-                <p class="lead">Connect with me through various platforms.</p>
+                <a href="projects.html" class="link-subtle">&larr; Back to Projects</a>
+                <h1>TTRPG Quest & NPC Generator</h1>
+                <p class="lead">A free-to-use web app for tabletop role-playing games. No ads, no logins, just instant inspiration with four unique themes: Fantasy, Space, Mobster, and Underwater.</p>
             </header>
 
-            <!-- Social Media Links Section -->
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <a href="mailto:timrishellr@gmail.com">
-                        <i class="fas fa-envelope" aria-hidden="true"></i>
-                        <span>timrishellr@gmail.com</span>
-                    </a>
+            <!-- Accessible Carousel -->
+            <div class="carousel-container" aria-roledescription="carousel" aria-label="Project Screenshots">
+                <div class="carousel-track">
+                    <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="1 of 4">
+                        <img src="./resources/images/rpforge-fantasy.jpg" alt="Screenshot of the TTRPG generator's fantasy theme.">
+                    </div>
+                    <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="2 of 4">
+                        <img src="./resources/images/rpforge-space.jpg" alt="Screenshot of the TTRPG generator's space theme.">
+                    </div>
+                    <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="3 of 4">
+                        <img src="./resources/images/rpforge-underwater.jpg" alt="Screenshot of the TTRPG generator's Underwater theme.">
+                    </div>
+                    <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="4 of 4">
+                        <img src="./resources/images/rpforge-mobster.jpg" alt="Screenshot of the TTRPG generator's mobster theme.">
+                    </div>
                 </div>
-                <div class="contact-card">
-                    <a href="https://www.linkedin.com/in/timrishellr/" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin" aria-hidden="true"></i>
-                        <span>LinkedIn Profile</span>
-                    </a>
-                </div>
-                <div class="contact-card">
-                    <a href="https://github.com/Cheftr" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github" aria-hidden="true"></i>
-                        <span>GitHub Profile</span>
-                    </a>
-                </div>
+                <button class="carousel-btn carousel-btn--left" aria-label="Previous Slide">&lt;</button>
+                <button class="carousel-btn carousel-btn--right" aria-label="Next Slide">&gt;</button>
+                <div class="carousel-nav" aria-label="Slide Navigation"></div>
+            </div>
+
+            <hr class="separator">
+
+            <!-- Whimsical Link to Live Site -->
+            <div class="fantasy-link-container">
+                <h2>Embark on an Adventure!</h2>
+                <p>Your next great story awaits. Visit the generator and let fate decide the next step in your campaign.</p>
+                <a href="https://rpgenerator.pages.dev/" target="_blank" rel="noopener" class="btn btn-fantasy">
+                    Visit the RPForge!
+                </a>
             </div>
         </section>
     </main>
 
-    <!-- Consistent Footer from index.html -->
+    <!-- Consistent Footer -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Tim Rishell | <a href="mailto:timrishellr@gmail.com">Contact</a></p>

@@ -1,136 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="About Tim Rishell">
-  <title>Tim Rishell - About</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link href="./resources/css/reset.css" type="text/css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link href="./resources/css/style.css" type="text/css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Tim Rishell - Learn more about my background, journey into technology, and personal interests.">
+    <title>Tim Rishell - About</title>
+    
+    <!-- Unified Stylesheet -->
+    <link href="./resources/css/style.css" rel="stylesheet" />
+    
+    <!-- Font Awesome for Icons (used in footer) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" xintegrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H721TL27NS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-H721TL27NS');
+    </script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H721TL27NS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
+<body>
 
-  gtag('config', 'G-H721TL27NS');
-</script>
+    <!-- Consistent Header from index.html -->
+    <header class="header">
+        <nav class="container navbar">
+            <a class="navbar-brand" href="index.html" aria-label="Go to homepage">
+                <img src="resources/images/it_me_trans.png" alt="A profile picture of Tim Rishell" class="profile-picture">
+            </a>
+            <div class="theme-switcher-wrapper">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Switch between light and dark modes">
+                    <span class="theme-toggle-icon" aria-hidden="true">☀️</span>
+                </button>
+            </div>
+            <button class="navbar-toggler" id="navbar-toggler" aria-label="Toggle navigation" aria-controls="nav-menu" aria-expanded="false">
+                <span class="toggler-icon"></span>
+                <span class="toggler-icon"></span>
+                <span class="toggler-icon"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="credentials.html">Credentials</a></li>
+                <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                <li class="nav-item"><a class="nav-link active" href="about.html" aria-current="page">About Me</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<body class="bg-dark">
-  <header>
-    <!-- Header of page -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <div class="container">
-        <a class="nav-link" href="index.html" tabindex="0"><img src="resources/images/it_me_trans.png" alt="Tim Rishell picture"
-            class="profile-picture"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html" tabindex="0">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="credentials.html" tabindex="0">Credentials</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="projects.html" tabindex="0">Projects</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="about.html" tabindex="0">About Me <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html" tabindex="0">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <div class="container mt-5">
-      <h1 class="text-center text-light">About Me</h1>
-      <p class="text-center text-light">Learn more about who I am, my background, and my interests.</p>
-      <!-- First Section: Introduction with Profile Picture -->
-      <div class="row align-items-center mt-5">
-        <div class="col-md-6 text-light">
-          <p tabindex="0">&nbsp;&nbsp;&nbsp;My name is Tim Rishell, a Michigan native with a passion for nature, adventure, culinary arts, and technology. My journey began in the beautiful state of Michigan, where I was born and raised. Since high school, I've been lucky to share my life with my amazing partner, Ariel. We met in 2015 and she is the best thing to ever happen to me, I truly am lucky to share this journey with her.<br>
-            &nbsp;&nbsp;&nbsp;My love for learning led me to explore the world of programming in 2017. I've been on a self-driven journey ever since, diving into various programming languages and constantly expanding my knowledge.<br>
-            &nbsp;&nbsp;&nbsp;When I'm not coding or working, you'll often find me out in nature. I love hiking, rock climbing, and exploring the great outdoors. I also enjoy unwinding with a good PC video game now and then.<br>
-            &nbsp;&nbsp;&nbsp;Thanks for stopping by to learn a bit about me. Feel free to reach out through any of my <a href="contact.html" tabindex="0" alt="contact page link">contact methods</a>.
-          </p>
-        </div>
-        <div class="col-md-6 text-center">
-          <img src="resources/images/it_me.jpg" alt="Tim Rishell picture" class="img-fluid rounded-circle about-picture" tabindex="0">
-        </div>
-      </div>
-      <!-- Separator Line -->
-      <hr class="bg-light my-5">
-      <!-- Cards Section -->
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="card bg-dark text-light" tabindex="0" role="button" aria-label="Ariel and Myself visiting a local Arboretum and Botanical Garden.">
-            <img src="resources/images/20230612_151642.jpg" class="card-img-top" alt="Picture of Tim Rishell and his partner Ariel" tabindex="0">
-            <div class="card-body">
-              <p class="card-text" tabindex="0">Ariel and Myself visiting a local Arboretum and Botanical Garden.</p>
+    <main>
+        <section class="container page-section">
+            <header class="text-center">
+                <h1>About Me</h1>
+                <p class="lead">Learn more about who I am, my background, and my interests.</p>
+            </header>
+            
+            <!-- Introduction Section -->
+            <div class="row" style="align-items: center; margin-top: 2rem;">
+                <div class="col-md-7">
+                    <p>My name is Tim Rishell, a Michigan native with a passion for nature, adventure, culinary arts, and technology. My journey began in the beautiful state of Michigan, where I was born and raised. Since high school, I've been lucky to share my life with my amazing partner, Ariel. We met in 2015 and she is the best thing to ever happen to me, I truly am lucky to share this journey with her.</p>
+                    <p>My love for learning led me to explore the world of programming in 2017. I've been on a self-driven journey ever since, diving into various programming languages and constantly expanding my knowledge.</p>
+                    <p>When I'm not coding or working, you'll often find me out in nature. I love hiking, rock climbing, and exploring the great outdoors. I also enjoy unwinding with a good PC video game now and then.</p>
+                    <p>Thanks for stopping by to learn a bit about me. Feel free to reach out through any of my <a href="contact.html">contact methods</a>.</p>
+                </div>
+                <div class="col-md-5 text-center">
+                    <img src="resources/images/it_me.jpg" alt="A portrait of Tim Rishell smiling outdoors." class="about-picture">
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card bg-dark text-light" tabindex="0" role="button" aria-label="My furry companion, Buddy, a black cat with a big personality and big voice, is always by my side, keeping me company through all of life's adventures.">
-            <img src="resources/images/20220610_132131.jpg" class="card-img-top" alt="Picture of my black cat Buddy on my lap" tabindex="0">
-            <div class="card-body">
-              <p class="card-text" tabindex="0">My furry companion, Buddy, a black cat with a big personality and big voice &#128580;, is always by my side, keeping me company through all of life's adventures.</p>
+
+            <hr class="separator">
+
+            <!-- Cards Section -->
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <img src="resources/images/20230612_151642.jpg" class="card-img-top" alt="Tim Rishell and his partner Ariel smiling together at an arboretum.">
+                        <div class="card-body">
+                          <p class="card-text">Ariel and I visiting a local Arboretum and Botanical Garden.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <img src="resources/images/20220610_132131.jpg" class="card-img-top" alt="A black cat named Buddy with a clipped ear, resting comfortably on a lap.">
+                        <div class="card-body">
+                          <p class="card-text">My furry companion, Buddy, a black cat with a big personality and big voice, is always by my side.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <img src="resources/images/chef_me.PNG" class="card-img-top" alt="Tim Rishell in a chef coat, featured in an article about culinarians.">
+                        <div class="card-body">
+                          <p class="card-text">I was featured in an article about culinarians by <a href="https://www.northernlakes.net/region-2-hot-jobs/hospitality/culinarian/" target="_blank" rel="noopener noreferrer">Northern Lakes Economic Alliance</a>. <a href="https://www.youtube.com/watch?v=poqzllXQ8L0" target="_blank" rel="noopener noreferrer" aria-label="Watch the video on YouTube"><i class="fab fa-youtube"></i> Watch the video</a>.</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <img src="resources/images/20191217_135032(0).jpg" class="card-img-top" alt="Tim Rishell on a Sno-Go bike on a snowy hill.">
+                        <div class="card-body">
+                          <p class="card-text">Riding a SNO-GO bike during my three years working at a ski and golf resort, where I was also a zipline and Segway tour guide.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card bg-dark text-light" tabindex="0" role="button" aria-label="Here I was featured in an article about culinarians accompanied by a spotlight video made by Northern Lakes Economic Alliance.">
-            <img src="resources/images/chef_me.PNG" class="card-img-top" alt="Picture of Tim Rishell in a chef coat" tabindex="0">
-            <div class="card-body">
-              <p class="card-text" tabindex="0">Here I was featured in an article about culinarians accompanied by a spotlight video made by <a
-                href="https://www.northernlakes.net/region-2-hot-jobs/hospitality/culinarian/" target="_blank" aria-label="Northern Lakes Economic Alliance" tabindex="0">Northern Lakes Economic Alliance</a>.&nbsp;<a href="https://www.youtube.com/watch?v=poqzllXQ8L0&ab_channel=NorthernLakesEconomicAlliance" target="_blank" aria-label="Link to video" tabindex="0"><i class="fab fa-youtube"></i>Link to video</a></p>
+        </section>
+    </main>
+
+    <!-- Consistent Footer from index.html -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Tim Rishell | <a href="mailto:timrishellr@gmail.com">Contact</a></p>
+            <div>
+                <a href="https://github.com/Cheftr" class="social-link" aria-label="Visit my GitHub profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-github fa-lg"></i></a>
+                <a href="https://linkedin.com/in/timrishellr" class="social-link" aria-label="Visit my LinkedIn profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin fa-lg"></i></a>
             </div>
-          </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="card bg-dark text-light" tabindex="0" role="button" aria-label="Myself riding a SNO-GO bike. For three incredible years, I worked at a ski and golf resort in northern Michigan. I had the joy of being a zipline tour guide, a Segway guide, and a SNO-GO bike instructor. Those days were filled with adventure, fresh air, and unforgettable experiences.">
-            <img src="resources/images/20191217_135032(0).jpg" class="card-img-top" alt="Image of Tim on a snow-go bike, a tricycle with 3 mini snowboards instead of wheels" tabindex="0">
-            <div class="card-body">
-              <p class="card-text" tabindex="0">Myself riding a SNO-GO bike. For three incredible years, I worked at a ski and golf resort in northern Michigan. I had the joy of being a zipline tour guide, a Segway guide, and a SNO-GO bike instructor. Those days were filled with adventure, fresh air, and unforgettable experiences.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Additional cards can be added here -->
-      </div>
-    </div>
-  </main>
-  <footer class="bg-dark text-light text-center py-3">
-    <div class="container">
-      <p>© 2024 Tim Rishell | <a href="mailto:timrishellr@gmail.com" class="text-light">Contact</a></p>
-      <div>
-        <a href="https://github.com/Cheftr" class="text-light mr-2" aria-label="link to my github account" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/timrishellr" class="text-light mr-2" aria-label="link to my linkedin account" target="_blank"><i class="fab fa-linkedin"></i></a>
-      </div>
-    </div>
-  </footer>
-  <!-- Bootstrap and jQuery -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <script>
-    $(document).ready(function () {
-      $('[data-toggle="popover"]').popover();
-    });
-  </script>
+    </footer>
+
+<script type="module" src="./resources/js/main.js" defer></script>
 </body>
 </html>
